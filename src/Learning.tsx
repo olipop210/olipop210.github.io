@@ -68,7 +68,7 @@ const LearningResource = ({ title, desc, link }: LearningResourceProps) => {
             <li>
                 <h3>{title}</h3>
                 <section onClick={() => setShowingDesc(!showingDesc)}>
-                    <Document className={`${showingDesc ? 'blurred' : ''} unblurred`} renderMode='canvas' file={link} >
+                    <Document className={`${showingDesc ? 'blurred' : ''} unblurred`} renderMode='canvas' file={window.location + link} >
                         <Page renderAnnotationLayer={false} canvasBackground='transparent' renderTextLayer={false} pageNumber={1} width={300} />
                     </Document>
                     {
