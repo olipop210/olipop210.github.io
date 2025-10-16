@@ -1,0 +1,97 @@
+.learning-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    >li {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        >section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            >div.desc{
+                background-color: aliceblue;
+                height: 400px;
+                color: black;
+                position: absolute;
+                width: 300px;
+                height: auto;
+                background: transparent;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-direction: column;
+                >p{
+                    font-size: 1.2rem;
+                    
+                }
+                >a {
+                    margin-top: 20px;
+                    color: white;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }
+            .unblurred {
+                filter: none;
+                transition: 300ms all;
+            }
+            .blurred {
+                filter: blur(4px) brightness(0.7);
+            }
+            transition: all 1s;
+        }
+        >section:hover{
+            cursor: pointer;
+        }
+    }
+    .close-btn {
+        position: absolute;
+        z-index: 1100;
+        mask: url('../assets/icons/xmark.svg') no-repeat center;
+        width: 40px;
+        height: 40px;
+        background: white;
+        top: 50px;
+        right: 100px;
+        cursor: pointer;
+        transition: all 200ms;
+        &:hover {
+            background: linear-gradient(135deg, rgb(189, 83, 255) 0%, rgb(33, 4, 255) 100%);
+            transform: rotate(45deg);
+        }
+    }
+}
+.pdf-viewer-container {
+    backdrop-filter: blur(8px);
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .pdf-viewer {
+        position: absolute;
+        z-index: 1000;
+        margin-left: 50%;
+        width: 100dvw;
+        height: 100%;
+        overflow: scroll;
+        top: 0;
+    }
+}
