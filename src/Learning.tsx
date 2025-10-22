@@ -3,7 +3,10 @@ import './Learning.scss';
 
 import { Document, Page, pdfjs } from 'react-pdf';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.mjs',
+    import.meta.url,
+).toString();
 
 
 const Learning = () => {
@@ -12,17 +15,17 @@ const Learning = () => {
         {
             title: 'Java notatki v1.0',
             desc: 'Notatki z Javy, obejmuje zakres od kompletnych podstaw do bardziej zaawansowanych tematów jak klasy wyjątki i binarki',
-            link: 'java.pdf'
+            link: './java.pdf'
         },
         {
             title: 'Zbrodnie Ha*dukiewicza',
             desc: 'Notatki z C++ obejmujące podstawy języka, wskaźniki, klasy i dziedziczenie',
-            link: 'hajdukiewicz.pdf'
+            link: './hajdukiewicz.pdf'
         },
         {
             title: 'F*stowicz ty k*rwo',
             desc: 'Notatki z lekcji urządzeń techniki komputerowej, obejmujące elementy organizacji systemów komputerowych, architekturę komputerów, logiki dla informatyków, układów cyfrowych i budowy komputerów',
-            link: 'fastowicz.pdf'
+            link: './fastowicz.pdf'
         }
     ]
 
