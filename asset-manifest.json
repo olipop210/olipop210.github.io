@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.354156f3.css",
-    "main.js": "/static/js/main.34473113.js",
+    "main.css": "/static/css/main.f5417270.css",
+    "main.js": "/static/js/main.f057fee7.js",
     "static/js/453.c7b4e98f.chunk.js": "/static/js/453.c7b4e98f.chunk.js",
-    "static/media/pdf.worker.min.mjs": "/static/media/pdf.worker.min.76f8f99239e519fb02c1.mjs",
     "static/media/Rubik-VariableFont_wght.ttf": "/static/media/Rubik-VariableFont_wght.d3c04283940221abf09a.ttf",
     "static/media/Rubik-Italic-VariableFont_wght.ttf": "/static/media/Rubik-Italic-VariableFont_wght.fd7f92cb40d1a1ce05dd.ttf",
     "static/media/GrenzeGotisch-VariableFont_wght.ttf": "/static/media/GrenzeGotisch-VariableFont_wght.ddd4797c686385f65db0.ttf",
@@ -13,12 +12,12 @@
     "static/media/person.crop.circle.svg": "/static/media/person.crop.circle.25b27c006bb043077482.svg",
     "static/media/xmark.svg": "/static/media/xmark.0e21fb4ba8811657d48e.svg",
     "index.html": "/index.html",
-    "main.354156f3.css.map": "/static/css/main.354156f3.css.map",
-    "main.34473113.js.map": "/static/js/main.34473113.js.map",
+    "main.f5417270.css.map": "/static/css/main.f5417270.css.map",
+    "main.f057fee7.js.map": "/static/js/main.f057fee7.js.map",
     "453.c7b4e98f.chunk.js.map": "/static/js/453.c7b4e98f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.354156f3.css",
-    "static/js/main.34473113.js"
+    "static/css/main.f5417270.css",
+    "static/js/main.f057fee7.js"
   ]
 }
