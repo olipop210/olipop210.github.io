@@ -1,12 +1,8 @@
 import { useState } from 'react';
 import './Learning.scss';
 
-import { Document, Page, pdfjs } from 'react-pdf';
+import { Worker, Viewer, SpecialZoomLevel } from '@react-pdf-viewer/core';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.mjs',
-    import.meta.url,
-).toString();
 
 
 const Learning = () => {
@@ -31,9 +27,11 @@ const Learning = () => {
 
     return (
         <>
-            <ul className='learning-list'>
-                {learningResources.map((resource, index) => <LearningResource key={index} {...resource} />)}
-            </ul>
+            <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                <ul className='learning-list'>
+                    {learningResources.map((resource, index) => <LearningResource key={index} {...resource} />)}
+                </ul>
+            </Worker>
         </>
     );
 };
@@ -68,9 +66,13 @@ const LearningResource = ({ title, desc, link }: LearningResourceProps) => {
             <li>
                 <h3>{title}</h3>
                 <section onClick={() => setShowingDesc(!showingDesc)}>
-                    <Document className={`${showingDesc ? 'blurred' : ''} unblurred`} renderMode='canvas' file={window.location + link} >
-                        <Page renderAnnotationLayer={false} canvasBackground='transparent' renderTextLayer={false} pageNumber={1} width={300} />
-                    </Document>
+                    <article className={`${showingDesc ? 'blurred' : ''} unblurred`}>
+                        <Viewer defaultScale={0.50} pageLayout={{
+                            buildPageStyles({ numPages, pageIndex, scrollMode, viewMode, }) {
+                                return pageIndex !== 0 ? { display: 'none' } : { display: 'block' }
+                            }
+                        }} fileUrl={link} />
+                    </article>
                     {
                         showingDesc ? <div className='desc'>
                             <p>{desc}</p>
@@ -83,13 +85,9 @@ const LearningResource = ({ title, desc, link }: LearningResourceProps) => {
             {
                 showingPDF ? <section className='pdf-viewer-container'> <div className='pdf-viewer'>
 
-                    <Document renderMode='canvas' onLoadSuccess={onDocumentLoadSuccess} file={link} >
-                        {
-                            pagesArr.map((pageNum) => (
-                                <Page key={pageNum} renderAnnotationLayer={false} canvasBackground='transparent' renderTextLayer={false} pageNumber={pageNum} width={800} />
-                            ))
-                        }
-                    </Document>
+                    <Viewer setRenderRange={(visibleRenderRange) => {
+                        return { startPage: 0, endPage: visibleRenderRange.numPages }
+                    }} defaultScale={1.2} fileUrl={link} initialPage={20} />
                 </div> <div className='close-btn' onClick={() => setShowingPDF(false)}></div> </section> : null
             }
         </>
