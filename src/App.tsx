@@ -28,7 +28,8 @@ function App() {
   return (
     <main className="App">
       <header>
-        <h1>Lorem Ipsum</h1>
+        <h1>Oliwier Popielarczyk</h1>
+        <h3>Tu miał być podtytuł</h3>
       </header>
       <article>
         <section onClick={() => setPanelData('about-me')} className='about-me-card'>
