@@ -1,0 +1,57 @@
+.projects-list {
+    width: 100%;
+    height: auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+    padding-bottom: 20vh;
+    margin: 0;
+    overflow: scroll;
+    @media (max-width: 768px) {
+        flex-direction: column !important;
+        height: 80vh;
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
+    >li {
+        min-width: 25%;
+        max-width: 25%;
+        display: flex;
+        margin: 30px;
+        padding: 10px;
+        background-color: rgb(255, 255, 255, 0.5);
+        border-radius: 10px;
+        aspect-ratio: 1 / 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        transition: all 200ms;
+        @media (max-width: 768px) {
+            width: 90%;
+        }
+        .project-icon {
+            width: 75%;
+            aspect-ratio: 1 / 1;
+            margin-bottom: 20px;
+            >img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        >h2 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        &:hover{ 
+            cursor: pointer;
+            transform: scale(1.05);
+            
+        }
+    }
+}

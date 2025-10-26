@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.scss';
 import Learning from './Learning';
+import Projects from './Projects';
 
 
 function App() {
@@ -54,7 +55,7 @@ function App() {
       <section style={{ transform: panelData ? 'translateY(0dvh)' : 'translateY(75dvh)' }} className='information-panel'>
         {panelData === 'about-me' && <p>Informacje o mnie</p>}
         {panelData === 'learning-materials' && <Learning />}
-        {panelData === 'projects' && <p>Projekty</p>}
+        {panelData === 'projects' && <Projects />}
       </section>
     </main>
   );
