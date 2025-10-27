@@ -61,12 +61,6 @@ const LearningResource = ({ title, desc, link }: LearningResourceProps) => {
         setShowingDesc(false);
     }
 
-    const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
-        const pages = Array.from({ length: numPages }, (_, i) => i + 1);
-        setPagesArr(pages);
-        console.log('Pages array: ', pages);
-    }
-
     return (
         <>
             <li>

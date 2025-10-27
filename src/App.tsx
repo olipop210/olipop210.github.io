@@ -30,7 +30,7 @@ function App() {
   return (
     <main className="App">
       <header>
-        <h1>Lorem ipsum</h1>
+        <h1>Oliwier Popielarczyk</h1>
         <h3>Tu miał być podtytuł</h3>
       </header>
       <article>
