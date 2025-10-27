@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Learning.scss';
 
 import { Worker, Viewer, SpecialZoomLevel } from '@react-pdf-viewer/core';
+import { title } from 'process';
 
 
 
@@ -19,9 +20,14 @@ const Learning = () => {
             link: './hajdukiewicz.pdf'
         },
         {
-            title: 'F*stowicz ty k*rwo',
+            title: 'Jarek fanatyk drukarek',
             desc: 'Notatki z lekcji urządzeń techniki komputerowej, obejmujące elementy organizacji systemów komputerowych, architekturę komputerów, logiki dla informatyków, układów cyfrowych i budowy komputerów',
-            link: './fastowicz.pdf'
+            link: './jarek.pdf'
+        },
+        {
+            title: 'Sieci kąkuterowe',
+            desc: 'Notatki z sieci komputerowych, głównie obejmujące zagadnienia teoretyczne. Trochę niedopracowane bo to z 2022 i robione dość na szybko przed sprawdzianem',
+            link: './sieci.pdf'
         }
     ]
 

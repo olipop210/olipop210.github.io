@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.scss';
 import Learning from './Learning';
 import Projects from './Projects';
+import AboutMe from './AboutMe';
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
   return (
     <main className="App">
       <header>
-        <h1>Oliwier Popielarczyk</h1>
+        <h1>Lorem ipsum</h1>
         <h3>Tu miał być podtytuł</h3>
       </header>
       <article>
@@ -53,7 +54,7 @@ function App() {
         <div onClick={() => setPanelData(null)} className='close-icon'></div>
       </section>
       <section style={{ transform: panelData ? 'translateY(0dvh)' : 'translateY(75dvh)' }} className='information-panel'>
-        {panelData === 'about-me' && <p>Informacje o mnie</p>}
+        {panelData === 'about-me' && <AboutMe />}
         {panelData === 'learning-materials' && <Learning />}
         {panelData === 'projects' && <Projects />}
       </section>
