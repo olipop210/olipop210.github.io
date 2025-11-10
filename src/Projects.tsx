@@ -82,7 +82,7 @@ const Projects = () => {
             ],
             github: 'https://github.com/olipop210/olipop210.github.io',
             technologies: {
-                frontend: [{ name: 'React (TS)', icon: 'react.png' }, { name: 'Sass', icon: 'sass.png' }, { name: 'React-PDF', icon: 'reactPDF.png' }]
+                frontend: [{ name: 'React (TS)', icon: 'react.png' }, { name: 'Sass', icon: 'sass.png' }, { name: 'React-PDF', icon: 'react.png' }]
             }
         },
         {
@@ -96,6 +96,19 @@ const Projects = () => {
             ],
             technologies: {
                 frontend: [{ name: 'Vite (React/TS)', icon: 'vite.png' }, { name: 'Sass', icon: 'sass.png' }]
+            }
+        },
+        {
+            title: 'Solvro cocktails (2025)',
+            desc: 'Aplikacja stworzona na potrzeby rekrutacji do Solvro. Prosta aplikacja do przeglądania przepisów na drinki z wykorzystaniem zewnętrznego API.',
+            icon: 'cocktail.png',
+            github: 'https://github.com/olipop210/solvro-rekrutacja-frontend?tab=readme-ov-file',
+            link: 'https://solvro-frontend-f6yl88407-olipops-projects.vercel.app/',
+            platforms: [
+                { name: 'Web (desktop/mobile)', icon: 'web' }
+            ],
+            technologies: {
+                frontend: [{ name: 'NextJS', icon: 'nextjs.svg' }, { name: 'Tailwind CSS', icon: 'tailwind.png' }, { name: 'NestJS', icon: 'nestJS.png' }, { name: 'MongoDB', icon: 'mongo.svg' }]
             }
         }
     ]
