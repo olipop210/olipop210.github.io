@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fe64ee88.css",
-    "main.js": "/static/js/main.4e64cb41.js",
+    "main.js": "/static/js/main.a4bfb80a.js",
     "static/js/453.c7b4e98f.chunk.js": "/static/js/453.c7b4e98f.chunk.js",
     "static/media/Rubik-VariableFont_wght.ttf": "/static/media/Rubik-VariableFont_wght.d3c04283940221abf09a.ttf",
     "static/media/Rubik-Italic-VariableFont_wght.ttf": "/static/media/Rubik-Italic-VariableFont_wght.fd7f92cb40d1a1ce05dd.ttf",
@@ -13,11 +13,11 @@
     "static/media/xmark.svg": "/static/media/xmark.0e21fb4ba8811657d48e.svg",
     "index.html": "/index.html",
     "main.fe64ee88.css.map": "/static/css/main.fe64ee88.css.map",
-    "main.4e64cb41.js.map": "/static/js/main.4e64cb41.js.map",
+    "main.a4bfb80a.js.map": "/static/js/main.a4bfb80a.js.map",
     "453.c7b4e98f.chunk.js.map": "/static/js/453.c7b4e98f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe64ee88.css",
-    "static/js/main.4e64cb41.js"
+    "static/js/main.a4bfb80a.js"
   ]
 }
